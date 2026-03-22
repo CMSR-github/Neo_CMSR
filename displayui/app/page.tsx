@@ -16,11 +16,11 @@ export default function Page() {
   }, []);
 
   const metrics = [
-    { title: "💨 VELOCITY 💨", value: velocity, unit: "m/s" },
-    { title: "🚤 ACCELERATION 🚤", value: acceleration, unit: "m/s²" },
-    { title: "🌡️ TEMPERATURE 🌡️", value: temperature, unit: "°C" },
-    { title: "🔌 CURRENT 🔌", value: current, unit: "amps" },
-    { title: "⚡ VOLTAGE ⚡", value: voltage, unit: "volts" },
+    { title: "VELOCITY", value: velocity, unit: "m/s" },
+    { title: "ACCELERATION", value: acceleration, unit: "m/s²" },
+    { title: "TEMPERATURE", value: temperature, unit: "°C" },
+    { title: "CURRENT", value: current, unit: "amps" },
+    { title: "VOLTAGE", value: voltage, unit: "volts" },
   ];
 
   return (
@@ -30,12 +30,12 @@ export default function Page() {
       <Sparkles />
 
       {/* Floating Unicorns */}
-      <Unicorns />
+      {/* <Unicorns /> */}
 
       {/* HEADER */}
       <div className="z-10 bg-gradient-to-r from-red-500 to-pink-600 border-[6px] border-red-900 rounded-3xl px-14 py-5 mb-16 shadow-2xl shadow-pink-600/50">
         <h1 className="text-white text-4xl md:text-5xl font-bold tracking-widest drop-shadow-lg">
-          💎 OPTIMISLAYTION 💅
+          OPTIMI-SLAY-TION
         </h1>
       </div>
 
