@@ -1,3 +1,8 @@
+/**
+THIS PRINTS READINGS IN THIS FORMAT:
+{voltage}#{current}#{temperature}#{acceleration}\n
+*/
+
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BNO055.h>
@@ -59,7 +64,7 @@ void loop(void)
 
   /* Update the acceleration */
   imu::Vector<3> accel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-  a_readings[sampleIndex] = sqrt(accel.x()+accel.y()+accel.z());
+  a_readings[sampleIndex] = sqrt(accel.x()*accel.x()+accel.y()*accel.y()+accel.z()*accel.z());
 
 
   /** Get current*/
@@ -103,13 +108,14 @@ void loop(void)
   sampleIndex++;
   if (sampleIndex >= numSamples) {
     /** DISPLAY ALL AVERAGES*/
-    Serial.print(v_avg, 3)
+    Serial.print(v_avg, 3);
     Serial.print("#");
-    Serial.print(i_avg, 3)
+    Serial.print(i_avg, 3);
     Serial.print("#");
     Serial.print(temp_avg, 1);
     Serial.print("#");
     Serial.print(a_avg, 3);
+    Serial.println("");
     sampleIndex = 0;
   }
 
