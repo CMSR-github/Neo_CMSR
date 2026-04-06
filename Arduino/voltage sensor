@@ -1,0 +1,21 @@
+#include <Wire.h>
+int val11;
+float val2;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("Voltage: ");
+  Serial.print("V");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  float temp;
+  val11=analogRead(1);
+  temp=val11/4.092;
+  val2=(temp/10);
+  Serial.println(val2);
+
+  delay(1000);
+}
