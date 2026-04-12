@@ -4,6 +4,7 @@ const { ReadlineParser } = require('@serialport/parser-readline');
 const { Server } = require('socket.io');
 
 // NOTE: Change '/dev/ttyACM0' to your actual Pi USB port (could be '/dev/ttyUSB0')
+// Run `ls /dev/tty*` in your terminal to find the correct port if needed.
 const ARDUINO_PORT = "/dev/tty.usbmodem2101"
 
 // 1. Setup WebSocket Server on port 3001

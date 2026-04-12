@@ -51,7 +51,7 @@ interface DecorativeIcon {
   };
 }
 
-export const Frame = (): JSX.Element => {
+export const Frame = () => {
   const [metrics] = useState<MetricCardData[]>([
     {
       title: "VELOCITY",
